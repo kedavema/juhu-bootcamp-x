@@ -18,3 +18,8 @@ def busqueda(request):
         return redirect(reverse('busqueda', kwargs={'laboratorios': laboratorios, 'map': map }))
     return render(request, 'busqueda.html')
 
+
+def detalle_laboratorio(request, nombre_laboratorio):
+    laboratorio = Laboratorio.objects.filter(slug=nombre_laboratorio)
+    return render(request, 'detalle_laboratorio.html', {"laboratorio": laboratorio})
+
