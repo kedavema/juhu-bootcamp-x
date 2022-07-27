@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-yellow-400 to-fuchsia-900">
+  <div class="bg-white">
+    <header>
+      <div class="relative bg-white">
+        <div
+          class="flex justify-between items-center max-w-7xl mx-auto px-4 py-2 sm:px-6 md:justify-between md:space-x-10 lg:px-8">
+          <div class="flex justify-between lg:w-3 lg:flex-1">
+            <a href="#">
+              <span class="sr-only">Workflow</span>
+              <img class="h-14 w-auto sm:h-14" src="/media/images/juhulogo.png" alt="logojuhu">
+            </a>
+          </div>
+          <div class="-mr-2 -my-2 md:hidden">
+            <button type="button"
+              class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              aria-expanded="false">
+              <span class="sr-only">Open menu</span>
+              <!-- Heroicon name: outline/menu -->
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+          <nav class="hidden md:flex space-x-10">
+            <div class="relative">
+              <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+              <a type="button"
+                href="/"
+                class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                aria-expanded="false">
+                <span>Inicio</span>
+              </a>
+            </div>
+        </div>
+      </div>
+  </div>
+  <!--
+          Mobile menu, show/hide based on mobile menu state.
+        -->
+  <div class="hidden absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+    <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+      <div class="pt-5 pb-2 px-5">
+        <div class="flex items-center justify-between">
+          <div>
+            <img class="h-10 w-auto" src="/static/images/juhulogo.png" alt="logojuhu">
+          </div>
+          <div class="-mr-2">
+            <button type="button"
+              class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <span class="sr-only">Close menu</span>
+              <!-- Heroicon name: outline/x -->
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="mt-6">
+          <nav class="grid grid-cols-1 gap-7">
+            <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+              <div
+                class="flex-shrink-0 flex items-center justify-center h-7 w-7 rounded-md bg-gradient-to-r from-yellow-400 to-fuchsia-900 text-white"
+                style="padding:0.45rem;">
+                <!-- Heroicon name: outline/inbox -->
+                <img src="/static/images/clipart89514.png" alt="">
+              </div>
+              <div class="ml-4 text-base font-medium text-gray-900">Inbox</div>
+            </a>
+            <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+              <div
+                class="flex-shrink-0 flex items-center justify-center h-7 w-7 rounded-md bg-gradient-to-r from-yellow-400 to-fuchsia-900 text-white"
+                style="padding:0.45rem;">
+                <!-- Heroicon name: outline/annotation -->
+                <img src="/static/images/clipart89514.png" alt="">
+              </div>
+              <div class="ml-4 text-base font-medium text-gray-900">Messaging</div>
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="mt-6">
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </header>
+  <main>
+    <!-- Hero section -->
+    <div class="relative bg-gradient-to-r from-yellow-400 to-fuchsia-900">
+      <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-r from-yellow-400 to-fuchsia-900">
+        <div class="h-2 mx-auto">
+          <div class="relative sm:rounded-2xl sm:overflow-hidden">
+            <div class="relative px-4 sm:px-6 pt-10 lg:px-8">
+              <!-- Barra de buscador--------------- -->
+              <div class="flex justify-center flex">
+                <div class="">
+                  <form action="" method="POST">
+                    {% csrf_token %}
+                  <select name="ciudad"
+                    class="form-select form-select-lg mb-6 appearance-none block w-full px-4 py-2 text-lg font-normal text-gray-500 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-500 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    aria-label=".form-select-lg example" required>
+                    <option selected>Seleccione su ciudad</option>
+                    <option value="Asuncion">Asuncion</option>
+                    <option value="Lambare">Lambare</option>
+                    <option value="San Lorenzo">San Lorenzo</option>
+                    <option value="Fernando de la Mora">Fernando de la Mora</option>
+                    <option value="Capiata">Capiata</option>
+                    <option value="Ñemby">Ñemby</option>
+                    <option value="Luque">Luque</option>
+                    <option value="Villa Elisa">Villa Elisa</option>
+                  </select>
+                  <select name="enfermedad"
+                    class="form-select form-select-lg mb-6 appearance-none block w-full px-4 py-2 text-lg font-normal text-gray-500 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-500 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    aria-label=".form-select-lg example" required>
+                    <option selected>Seleccione la enfermedad</option>
+                    <option value="Cancer de mama">Cancer de mama</option>
+                    <option value="Cancer de utero">Cancer de utero</option>
+                    <option value="Diabetes">Diabetes</option>
+                    <option value="HIV">HIV</option>
+                  </select>
+                  <div class="flex justify-center">
+                    <button type="submit"
+                      class="flex justify-center items-center bg-fuchsia-900 hover:fuchsia-500 text-white font-bold py-2 px-4 rounded">Buscar</button>
+                    <div>
+                    </div>
+                  </div>
+                </form>
+                  <!-- Barra de buscador ---------------->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Mapa INICIO -->
+          <div class="mt-10" style="padding: 19rem; padding-top: 0;">
+            {{ map|safe }}
+          </div>
+          <!-- Mapa FIN -->
+          {% include 'footer.html' %}
+</body> 
+</html>      

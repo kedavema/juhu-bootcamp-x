@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-yellow-400 to-fuchsia-900 h-full">
+<div class="bg-white">
+    <header>
+      <div class="relative bg-white">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
+          <div class="flex justify-start lg:w-0 lg:flex-1">
+            <a href="#">
+              <span class="sr-only">Workflow</span>
+              <img class="h-12 w-auto sm:h-12" src="/media/images/juhulogo.png" alt="logojuhu">
+            </a>
+          </div>
+          <div class="-mr-2 -my-2 md:hidden">
+            <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+              <span class="sr-only">Open menu</span>
+              <!-- Heroicon name: outline/menu -->
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+          <nav class="hidden md:flex space-x-10">
+            <div class="relative">
+              <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+              <a href="/buscar-estudios-clinicos" type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false">
+                <span>Buscador de Análisis Clínicos</span>
+              </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!--
+          Mobile menu, show/hide based on mobile menu state.
+        -->
+        <div class="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+          <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+            <div class="pt-5 pb-6 px-5">
+              <div class="flex items-center justify-between">
+                <div>
+                  <img class="h-10 w-auto" src="/static/images/juhulogo.png" alt="logojuhu">
+                </div>
+                <div class="-mr-2">
+                  <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <span class="sr-only">Close menu</span>
+                    <!-- Heroicon name: outline/x -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="mt-6">
+                <nav class="grid grid-cols-1 gap-7">
+                  <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                    <div class="flex-shrink-0 flex items-center justify-center h-7 w-7 rounded-md bg-gradient-to-r from-yellow-400 to-fuchsia-900 text-white" style="padding: 0.45rem;">
+                      <!-- Heroicon name: outline/inbox -->
+                      <img src="/static/images/cruz.png" alt="">
+                    </div>
+                    <div class="ml-4 text-base font-medium text-gray-900">Inicio</div>
+                  </a>
+                  <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                    <div class="flex-shrink-0 flex items-center justify-center h-7 w-7 rounded-md bg-gradient-to-r from-yellow-400 to-fuchsia-900 text-white" style="padding: 0.45rem;">
+                      <!-- Heroicon name: outline/annotation -->
+                      <img src="/static/images/cruz.png" alt="">
+                      </svg>
+                    </div>
+                    <div class="ml-4 text-base font-medium text-gray-900">Análisis Clínicos</div>
+                  </a>
+                  <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                      </svg>
+                    </div>
+                  </a>
+                </nav>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+      <!-- Hero section -->
+      <div class="relative bg-gradient-to-r from-yellow-400 to-fuchsia-900 mb-16">
+        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-r from-yellow-400 to-fuchsia-900"></div>
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+           <div class="relative sm:rounded-2xl sm:overflow-hidden">
+            <!-- Aca comienza la tabla de listas+ -->
+<div class="px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="sm:flex sm:items-center mt-8">
+      <div class="sm:flex-auto">
+        <h1 class="text-xl font-semibold text-black">{{ laboratorio.nombre }}</h1>
+        <ul class="mt-2 text-sm text-black"><strong class="font-bold">Datos de Contacto</strong>
+            <li><strong class="font-semibold text-black">Teléfono: </strong>{{ laboratorio.telefono }}</li>
+            <li><strong class="font-semibold text-black">Correo electrónico: </strong>{{ laboratorio.correo }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="-mx-4 mt-10 ring-1 ring-gray-300 sm:-mx-6 md:mx-0 md:rounded-lg">
+        <!-- Tabla de detalles INICIO -->
+      <table class="min-w-full divide-y divide-gray-300 bg-white rounded-md">
+        <thead class="bg-white">
+          <tr class="bg-white">
+            <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:pl-6 lg:table-cell">Enfermedad</th>
+            <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell">Estudio</th>
+            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 rounded-md">Descripción</th>
+            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for est in laboratorio.estudios_clinicos.all %}
+          <tr>
+            <td class="relative py-4 pl-4 sm:pl-6 pr-3 text-sm">
+              <div class="font-medium text-gray-900">{{ est.enfermedad.nombre }}</div>
+            </td>
+            <td class="hidden px-3 py-3.5 text-sm text-gray-500 lg:table-cell">{{ est.nombre }}</td>
+            <td class="hidden px-3 py-3.5 text-sm text-gray-500 lg:table-cell">{{ est.descripcion }}</td>
+            <td class="hidden px-3 py-3.5 text-sm text-gray-500 lg:table-cell">{{ est.precio }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <!-- Aca termina la tabla -->
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+{% include 'footer.html' %}
+</body>
+</html>
+     
