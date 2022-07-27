@@ -1,6 +1,7 @@
 import folium
 from django.shortcuts import render
 from app.models import Laboratorio
+from app.utils import ubicaciones 
 
 
 def index(request):
@@ -20,8 +21,7 @@ def busqueda(request):
         map = folium.Map(width=800, height=500, location=[-25.324010, -57.561069], zoom_start=6)
         enfermedad = request.POST['enfermedad']
         ciudad = request.POST['ciudad']
-        if ciudad == 'Asuncion':
-            map = folium.Map(width=800, height=500, location=[-25.292535, -57.550450], zoom_start=12)
+        map = folium.Map(width=800, height=500, location= ubicaciones[ciudad], zoom_start=13)
           
         laboratorios = Laboratorio.objects.filter(estudios_clinicos__enfermedad__nombre=enfermedad)
         for lab in laboratorios:
